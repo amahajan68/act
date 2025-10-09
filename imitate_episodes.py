@@ -391,7 +391,7 @@ def eval_bc(config, ckpt_name, save_episode=True):
         attempts = len(episode_returns)
     else:
         attempts = 0
-        for rollout_id in range(num_rollouts_eval):
+        for rollout_id in range(num_eval_rollouts):
             if 'sim_transfer_cube' in task_name:
                 BOX_POSE[0] = sample_box_pose()
             elif 'sim_insertion' in task_name:
